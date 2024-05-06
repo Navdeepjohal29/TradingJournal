@@ -22,7 +22,7 @@ const TradingCalendar = () => {
   const fetchTrades = async () => {
     // Mocked trade data
     try {
-      const response = await fetch('http://localhost:3001/api/trades'); // Replace with your API endpoint
+      const response = await fetch('http://tradejournal.com:3001/api/trades'); // Replace with your API endpoint
       const res = await response.json();
       console.log("result is", res)
       setTrades(res);

@@ -10,7 +10,7 @@ import axios from 'axios';
 
 export const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/trades');
+      const response = await fetch('http://tradejournal.com:3001/api/trades');
   
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -35,7 +35,7 @@ export const createTrade= async(payload) =>{
 try {
                 
   // Make the POST request API server
-  const response =  await axios.post('http://localhost:3001/api/addTrade', payload);
+  const response =  await axios.post('http://tradejournal.com:3001/api/addTrade', payload);
 
   // Check the response status
   if (response.status === 200) {
@@ -61,7 +61,7 @@ export const editTrade = async(id, payload) =>{
   try {
                   
     // Make the POST request to your Express server
-    const response =  await axios.put(`http://localhost:3001/api/editTrade/${id}`, payload);
+    const response =  await axios.put(`http://tradejournal.com:3001/api/editTrade/${id}`, payload);
   
     // Check the response status
     if (response.status === 200) {
@@ -88,7 +88,7 @@ export const deleteTrade = async(id) =>{
 
   
   try{
-    const response =  await axios.delete(`http://localhost:3001/api/trades/${id}`);
+    const response =  await axios.delete(`http://tradejournal.com:3001/api/trades/${id}`);
   // Check the response status
   if (response.status === 200) {
     // Successful response
